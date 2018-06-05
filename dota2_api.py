@@ -10,6 +10,11 @@ def get_api_json(url):
 
 if __name__ == '__main__':
     pass
+def get_api_json2(match_id):
+    r=requests.get('https:/api.opendota.com/api/matches/{}'.format(match_id),timeout=3)
+    r_json=r.json()
+    return r_json
+    
 def get_ran_match_id(limi=1):
 
 #    def ransql(limi=1):
